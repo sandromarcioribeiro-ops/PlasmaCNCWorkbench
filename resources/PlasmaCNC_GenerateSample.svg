@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect x="8" y="43" width="48" height="8" fill="#607d8b"/>
-  <path d="M22 43 L32 10 L42 43 Z" fill="#f9a825" stroke="#263238" stroke-width="3"/>
-  <path d="M32 15 L28 40 H36 Z" fill="#ff7043"/>
-  <path d="M14 55h36" stroke="#00acc1" stroke-width="4" stroke-linecap="round"/>
-  <path d="M47 18v13M41 25h12" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="torch" x1="19" y1="7" x2="44" y2="43" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eceff1"/>
+      <stop offset="0.55" stop-color="#78909c"/>
+      <stop offset="1" stop-color="#263238"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="47" width="48" height="8" rx="2" fill="#455a64"/>
+  <path d="M22 8h16c3 0 5 2 5 5v15c0 2-1 4-3 5l-6 4-9-9 4-6H18c-2 0-4-2-4-4v-2c0-4 4-8 8-8z"
+        fill="url(#torch)" stroke="#263238" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M25 28l9 9-5 5-9-9z" fill="#ff7043" stroke="#263238" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M29 43c5 5 5 9 0 14-5-5-5-9 0-14z" fill="#ffca28"/>
+  <path d="M21 57h20" stroke="#00bcd4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="49" cy="17" r="9" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+  <path d="M49 12v10M44 17h10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
 </svg>
-
