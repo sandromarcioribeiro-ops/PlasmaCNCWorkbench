@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.tap
+*.nc
+*.FCStd1
+

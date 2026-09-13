@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+  <name>PlasmaCNCWorkbench</name>
+  <description>Bancada FreeCAD para preparar cortes plasma CNC e gerar G-code Mach3 com fluxo simples em portugues.</description>
+  <version>0.1.0</version>
+  <date>2026-09-13</date>
+  <maintainer email="sandromarcioribeiro@gmail.com">Sandro Ribeiro</maintainer>
+  <license file="LICENSE">MIT</license>
+  <url type="repository">https://github.com/sandromarcioribeiro-ops/PlasmaCNCWorkbench</url>
+  <content>
+    <workbench>
+      <classname>PlasmaCNCWorkbench</classname>
+      <subdirectory>.</subdirectory>
+    </workbench>
+  </content>
+</package>
