@@ -1,5 +1,8 @@
 """GUI registration for the Plasma CNC workbench."""
 
+import os
+
+import FreeCAD as App
 import FreeCADGui as Gui
 
 
@@ -9,6 +12,9 @@ class PlasmaCNCWorkbench(Gui.Workbench):
 
     def Initialize(self):
         from plasma_cnc.commands import PlasmaCNCGenerateSampleCommand, PlasmaCNCShowGuideCommand
+
+        icon_path = os.path.join(App.getUserAppDataDir(), "Mod", "PlasmaCNCWorkbench", "resources")
+        Gui.addIconPath(icon_path)
 
         Gui.addCommand("PlasmaCNC_ShowGuide", PlasmaCNCShowGuideCommand())
         Gui.addCommand("PlasmaCNC_GenerateSample", PlasmaCNCGenerateSampleCommand())

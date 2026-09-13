@@ -1,6 +1,5 @@
 """FreeCAD GUI commands for the Plasma CNC workbench."""
 
-import os
 from math import cos, pi, sin
 from textwrap import dedent
 
@@ -17,11 +16,6 @@ def _qt():
         from PySide2 import QtWidgets
 
         return QtWidgets
-
-
-def _icon_path():
-    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(root, "resources", "plasma_cnc.svg")
 
 
 def _circle(cx, cy, radius, segments=40):
@@ -49,7 +43,7 @@ class PlasmaCNCShowGuideCommand:
         return {
             "MenuText": "Guia Plasma Mach3",
             "ToolTip": "Mostra o passo a passo inicial para gerar corte plasma Mach3",
-            "Pixmap": _icon_path(),
+            "Pixmap": "PlasmaCNC_ShowGuide",
         }
 
     def Activated(self):
@@ -82,7 +76,7 @@ class PlasmaCNCGenerateSampleCommand:
         return {
             "MenuText": "Gerar exemplo Mach3",
             "ToolTip": "Gera um G-code Mach3 de exemplo com furos primeiro e contorno por ultimo",
-            "Pixmap": _icon_path(),
+            "Pixmap": "PlasmaCNC_GenerateSample",
         }
 
     def Activated(self):
