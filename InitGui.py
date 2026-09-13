@@ -5,16 +5,17 @@ import os
 import FreeCAD as App
 import FreeCADGui as Gui
 
+ICON_PATH = os.path.join(App.getUserAppDataDir(), "Mod", "PlasmaCNCWorkbench", "resources")
+Gui.addIconPath(ICON_PATH)
+
 
 class PlasmaCNCWorkbench(Gui.Workbench):
     MenuText = "Plasma CNC"
     ToolTip = "Preparar cortes de plasma CNC e gerar G-code Mach3"
+    Icon = "plasma_cnc.svg"
 
     def Initialize(self):
         from plasma_cnc.commands import PlasmaCNCGenerateSampleCommand, PlasmaCNCShowGuideCommand
-
-        icon_path = os.path.join(App.getUserAppDataDir(), "Mod", "PlasmaCNCWorkbench", "resources")
-        Gui.addIconPath(icon_path)
 
         Gui.addCommand("PlasmaCNC_ShowGuide", PlasmaCNCShowGuideCommand())
         Gui.addCommand("PlasmaCNC_GenerateSample", PlasmaCNCGenerateSampleCommand())
